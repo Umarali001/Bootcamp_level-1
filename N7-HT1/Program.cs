@@ -1,10 +1,10 @@
 ﻿
-DateTime[] daay = new DateTime[5];
-daay[0] = new DateTime(2023, 7, 15);
-daay[1] = new DateTime(2023, 7, 16);
-daay[1] = new DateTime(2023, 7, 17);
-daay[1] = new DateTime(2023, 7, 18);
-daay[1] = new DateTime(2023, 7, 19);
+DateOnly[] daay = new DateOnly[5];
+daay[0] = new DateOnly(2023, 7, 15);
+daay[1] = new DateOnly(2023, 7, 16);
+daay[1] = new DateOnly(2023, 7, 17);
+daay[1] = new DateOnly(2023, 7, 18);
+daay[1] = new DateOnly(2023, 7, 19);
 
 
 float[] sleep =  new float[5] {7f,8f,6f,9f,10f};
