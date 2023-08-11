@@ -1,36 +1,24 @@
-﻿// Kitob tipini yaratish
-class Book
+﻿
+using N10_HT1;
+
+Book book1 = new Book(1,"Amir Temur", 5 );
+Book book2 = new Book(2, "Samo", 2);
+Book book3 = new Book(3, "Sariq Dev", 1);
+
+
+LibraryMenegment libraryMenegment = new LibraryMenegment();
+
+libraryMenegment.Add(book1);
+libraryMenegment.Add(book2);
+libraryMenegment.Add(book3);
+
+Console.WriteLine("kitob Id sini kiriting");
+int bookId = Convert.ToInt32(Console.ReadLine());
+//libraryMenegment.Chekcout(bookId);
+
+if (libraryMenegment.Chekcout(bookId))
 {
-    // fieldlar
-    public int Id { get; set; }
-    public string Title { get; set; }
-    public string Another { get; set; }
+    Console.WriteLine("kitob topildi");
 }
-
-
-// Kutubxona boshqaruvi uchun tip yaratish
-class LibraryManagement
-{
-    public Dictionary<int, int> Books = new Dictionary<int, int>();
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    static void Main()
-    {
-        // Kitoblar yaratish
-        Book book1 = new Book { Id = 1, Title = "Kitob 1", Another = "a" };
-        Book book2 = new Book { Id = 1, Title = "Kitob 2", Another = "b" };
-        Book book3 = new Book { Id = 1, Title = "Kitob 3", Another = "c" };
-    }
+else
+    Console.WriteLine("kitob topilmadi");
