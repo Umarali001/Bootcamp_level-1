@@ -1,4 +1,7 @@
 ﻿
+using System.ComponentModel;
+using System.Drawing;
+
 Animals animals = new Animals();
 animals.MakeSound();
 
@@ -11,7 +14,14 @@ mammal.Run();
 Fish Fish = new Fish();
 Fish.Swim();
 
+Sparrow Sparrow = new Sparrow();
+Sparrow.Speed();
 
+Tiger Tiger = new Tiger();
+Tiger.Run();
+
+GreatWhiteShark greatWhiteShark = new GreatWhiteShark();
+greatWhiteShark.TallLength();
 
 
 public class Animals
@@ -52,18 +62,25 @@ public class Fish : Animals
 
 public class Sparrow : Bird
 {
-
+    public  void Speed()
+    { Console.WriteLine("Sparrows usually fly at the speed of 24 miles per hour"); }
 }
 
 
 public class Tiger : Mammal
 {
-     
+    public void Types()
+    {
+        Console.WriteLine("8 There are six different types of tigers.");
+    }
 }
 
 
 public class GreatWhiteShark : Fish
 {
-
+    public void TallLength()
+    {
+        Console.WriteLine("Adult great white sharks grow to a maximum size of approximately 20 feet in length");
+    }
 }
 

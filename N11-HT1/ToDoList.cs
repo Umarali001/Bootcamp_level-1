@@ -24,15 +24,7 @@ namespace N11_HT1
         public void Add(string tasks)
         {
             list.Add(new ToDo { TaskName = tasks, IsCompleted = false });
-            foreach (ToDo toDo in list)
-            {
-                if (toDo.TaskName == tasks)
-                {
-                    Console.WriteLine("qushildi");
-                }
-                else { Console.WriteLine("qushilmadi"); }
-
-            }
+            Console.WriteLine("qushildi");
         }
 
 
