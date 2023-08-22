@@ -14,7 +14,7 @@ var products = new List<Product>
     new Product("Iphone 14", 5, 10),
     new Product("Asus ROG Phone 5", 4, 70)
 };
-var sds = products.OrderByDescending(x => x.Stars).ThenBy(x => x.Inventory).ToList();
+var sds = products.OrderByDescending(x => x.Stars).ThenByDescending(x => x.Inventory).ToList();
 // Print the top 5 products based on inventory
 for (int i = 0; i < 5 && i < products.Count; i++)
 {
