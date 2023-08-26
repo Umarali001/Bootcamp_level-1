@@ -28,7 +28,7 @@ namespace N20_HT1
             if (product != null)
             {
                 decimal totalamount = product.Price * number;
-                _provider
+                _provider.Transfer(card, null, totalamount);
             }
         }
     }

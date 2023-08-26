@@ -15,8 +15,8 @@ IPaymentProvider uzumPaymentProvider = new UzumPaymentProvider(0.02M);
 
 
 
-OnlineMarket onlineMarketWithPayme = OnlineMarket(paymePaymentProvider);
-
+OnlineMarket onlineMarketWithPayme = new OnlineMarket(paymePaymentProvider);
+OnlineMarket onlineMarketWithUzum = new OnlineMarket(uzumPaymentProvider);
 
 
 
@@ -25,3 +25,18 @@ Product laptop = new Product("Laptop", 800);
 Product phone = new Product("Phone", 400);
 
 
+onlineMarketWithPayme.Add(laptop);
+onlineMarketWithPayme.Add(phone);
+onlineMarketWithUzum.Add(laptop);
+onlineMarketWithUzum.Add(phone);
+
+
+onlineMarketWithPayme.Buy("Laptop", 1, uzcard);
+onlineMarketWithPayme.Buy("Phone", 2, humo);
+
+onlineMarketWithUzum.Buy("Laptop", 1, uzcard);
+onlineMarketWithUzum.Buy("Phone", 1, humo);
+
+// Displaying remaining balances
+Console.WriteLine(uzcard.Balance);
+Console.WriteLine(humo.Balance);
